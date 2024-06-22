@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Главная страница</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div data-tauri-drag-region class="titlebar">
+        <div class="titlebar-box">
+          <img class="titlebar-image" src="assets/namashkaLogo.png" alt="titlebarImage">
+          <a class="titlebar-name" href="https://github.com/Levionid/NamashkaLauncherTauri" target="_blank">Намашка</a>
+        </div>
+        <div class="titlebar-button-minimize" id="titlebar-minimize" on:click={minimizeButton}>-</div>
+        <div class="titlebar-button-close" id="titlebar-close" on:click={closeButton}>
+          <img src="assets/exitButton.svg" alt="x">
+        </div>
+      </div>
 </body>
 </html>
