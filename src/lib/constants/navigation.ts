@@ -11,13 +11,13 @@ export const navigationLinks: NavigationLink[] = [
     activePath: '/'
   },
   {
-    href: '/important',
-    text: 'Важное',
-    activePath: '/important'
-  },
-  {
     href: '/season',
     text: 'О чем сезон?',
     activePath: '/season'
+  },
+  {
+    href: '/important',
+    text: 'Важное',
+    activePath: '/important'
   }
 ];

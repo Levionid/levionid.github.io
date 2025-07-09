@@ -72,40 +72,41 @@
 	</section>
 
 	<section class="details-section about-section">
-		<div class="details-container">
-			<div class="text-content reveal-on-scroll" use:reveal>
-				<div class="text-block">
-					<span>Добро пожаловать!</span>
-					<p>
-						Lestix — это приватный сервер для друзей, созданный для комфортной совместной игры и
-						реализации творческих идей.
-					</p>
-				</div>
-				<div class="text-block">
-					<span>Наше сообщество</span>
-					<p>
-						Мы ценим каждого игрока и стремимся создать дружелюбную атмосферу. Присоединяйся к
-						нашему Discord, чтобы быть в курсе всех новостей, участвовать в обсуждениях и найти
-						компанию для игры.
-					</p>
-				</div>
-				<div class="text-block">
-					<span>Проходка</span>
-					<p>
-						Оплата за сервер нужна для работы самого сервера и на покушать мне да и цена проходки не больше ебанного хотдога, так что не еби мне мозги и так дешево.
-					</p>
-				</div>
+	<div class="two-column-layout">
+		<div class="text-content-column">
+			<div class="text-block reveal-on-scroll" use:reveal>
+				<span>Добро пожаловать!</span>
+				<p>
+					Lestix — это приватный сервер для друзей, созданный для комфортной совместной игры и
+					реализации творческих идей.
+				</p>
 			</div>
-			<div class="discord-widget-container reveal-on-scroll" use:reveal>
-				<iframe
-					src="https://discord.com/widget?id=704944416191807568&theme=dark"
-					title="Discord Widget"
-					frameborder="0"
-					sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-				></iframe>
+			<div class="text-block reveal-on-scroll" use:reveal>
+				<span>Наше сообщество</span>
+				<p>
+					Мы ценим каждого игрока и стремимся создать дружелюбную атмосферу. Присоединяйся к нашему
+					Discord, чтобы быть в курсе всех новостей, участвовать в обсуждениях и найти компанию для
+					игры.
+				</p>
+			</div>
+			<div class="text-block reveal-on-scroll" use:reveal>
+				<span>Проходка</span>
+				<p>Проходка на сервер стоит <b>один</b> доллар. 
+					И <b>нет</b>, это <b>не дорого</b> - это не дороже <b>максичая</b>, 
+					но в отличие от него, здесь ты получаешь <b>кучу</b> эмоций на <b>целый</b> месяц. 
 			</div>
 		</div>
-	</section>
+
+		<div class="discord-widget-container reveal-on-scroll" use:reveal>
+			<iframe
+				src="https://discord.com/widget?id=704944416191807568&theme=dark"
+				title="Discord Widget"
+				frameborder="0"
+				sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+			></iframe>
+		</div>
+	</div>
+</section>
 </div>
 
 <style>
@@ -280,6 +281,34 @@
 	background-color: var(--card-border-color);
 }
 
+.two-column-layout {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex; 
+	gap: 40px;
+	align-items: stretch;
+}
+
+.text-content-column {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	flex: 1;
+}
+
+.discord-widget-container {
+	flex-basis: 350px;
+	min-width: 40%;
+	height: auto;
+}
+
+.discord-widget-container iframe {
+	width: 100%;
+	height: 100%;
+	min-height: 500px;
+}
+
+
 @media (max-width: 1000px) {
 	.home-hero::before {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -290,7 +319,13 @@
 }
 
 @media (max-width: 768px) {
-  .discord-widget-container iframe { height: 450px; }
+	.two-column-layout {
+		flex-direction: column;
+		gap: 40px;
+	}
+	.discord-widget-container {
+		flex-basis: auto;
+	}
 	.home-hero {
 			text-align: center;
 			justify-content: center;

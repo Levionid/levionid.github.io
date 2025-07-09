@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
 	import { navigationLinks } from '$lib/constants/navigation';
 	import ThemeToggle from './ThemeToggle.svelte';
 </script>
