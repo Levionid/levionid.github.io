@@ -338,7 +338,7 @@
 
 .discord-widget-container iframe {
   width: 100%;
-  height: 500px;
+  height: 330px;
   border-radius: var(--border-radius-md);
   box-shadow: var(--card-shadow);
   border: 1px solid var(--card-border-color);

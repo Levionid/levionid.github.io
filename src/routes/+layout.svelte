@@ -5,6 +5,7 @@
 	import NotificationContainer from '$lib/components/NotificationContainer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import './style.css';
+	import Footer from '$lib/components/Footer.svelte';
 
 	let isHomePage = false;
 	$: isHomePage = $page.url.pathname === '/';
@@ -23,4 +24,23 @@
 
 <Header />
 
-<slot />
+<div class="page-container">
+	<main>
+		<slot />
+	</main>
+
+	<Footer />
+</div>
+
+<style>
+	.page-container {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
+	main {
+		flex-grow: 1;
+		margin-bottom: 40px;
+	}
+</style>
