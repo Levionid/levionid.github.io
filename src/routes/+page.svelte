@@ -46,7 +46,7 @@
 					<span class="label">Версия</span>
 					<span class="value version">{SERVER_VERSION}</span>
 				</div>
-				<div class="divider" />
+				<div class="divider"></div>
 				<div class="info-block">
 					<span class="label">IP Адрес</span>
 					<button class="value ip-address" on:click={handleCopyIP} title="Нажми, чтобы скопировать">
@@ -96,7 +96,7 @@
 					title="Discord Widget"
 					frameborder="0"
 					sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-				/>
+				></iframe>
 			</div>
 		</div>
 	</section>
@@ -124,7 +124,7 @@
 		height: 100%;
 		background-color: var(--bg-image-color);
 		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-			url('./background.png');
+			url('/background.png');
 		background-size: contain;
 		background-position: right 10% center;
 		background-repeat: no-repeat;
@@ -277,7 +277,7 @@
 @media (max-width: 1000px) {
 	.home-hero::before {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-			url('./background.png');
+			url('/background.png');
 			filter: blur(5px);
 			transform: scale(1.1);
 	}
