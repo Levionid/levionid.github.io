@@ -10,7 +10,7 @@
 		content="Решение проблемы двухнедельной фазы и сохранение интереса к игре."
 	/>
 	<meta property="og:url" content="https://levionid.github.io/important" />
-	<meta property="og:image" content="https:/levionid.github.io/static/meta-image.jpeg" />
+	<meta property="og:image" content="https://levionid.github.io/meta-image.jpeg" />
 </svelte:head>
 
 <header class="hero hero-small">

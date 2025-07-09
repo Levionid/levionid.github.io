@@ -7,7 +7,7 @@
 	<meta property="og:title" content="Lestix - О чем сезон?" />
 	<meta property="og:description" content="Цели и планы текущего сезона на сервере." />
 	<meta property="og:url" content="https://levionid.github.io/season" />
-	<meta property="og:image" content="https:/levionid.github.io/static/meta-image.jpeg" />
+	<meta property="og:image" content="https://levionid.github.io/meta-image.jpeg" />
 </svelte:head>
 
 <header class="hero hero-small">
