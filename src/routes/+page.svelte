@@ -23,7 +23,7 @@
 	<meta property="og:title" content="Lestix - Главная" />
 	<meta property="og:description" content="Сервер с крутейшим сообществом и кучей эмоций!" />
 	<meta property="og:url" content="https://levionid.github.io/" />
-	<meta property="og:image" content="https://github.com/Levionid/levionid.github.io/blob/main/static/meta-image.jpeg" />
+	<meta property="og:image" content="https:/levionid.github.io/static/meta-image.jpeg" />
 </svelte:head>
 
 <div class="page-wrapper">
@@ -87,6 +87,12 @@
 						Мы ценим каждого игрока и стремимся создать дружелюбную атмосферу. Присоединяйся к
 						нашему Discord, чтобы быть в курсе всех новостей, участвовать в обсуждениях и найти
 						компанию для игры.
+					</p>
+				</div>
+				<div class="text-block">
+					<span>Проходка</span>
+					<p>
+						Оплата за сервер нужна для работы самого сервера и на покушать мне да и цена проходки не больше ебанного хотдога, так что не еби мне мозги и так дешево.
 					</p>
 				</div>
 			</div>
