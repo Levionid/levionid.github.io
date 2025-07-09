@@ -23,7 +23,7 @@
 	<meta property="og:title" content="Lestix - Главная" />
 	<meta property="og:description" content="Сервер с крутейшим сообществом и кучей эмоций!" />
 	<meta property="og:url" content="https://levionid.github.io/" />
-	<meta property="og:image" content="https://levionid.github.io/assets/meta-image.png" />
+	<meta property="og:image" content="meta-image.jpeg" />
 </svelte:head>
 
 <div class="page-wrapper">

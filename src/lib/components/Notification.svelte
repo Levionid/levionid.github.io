@@ -110,21 +110,10 @@
   touch-action: pan-y;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-body.dark-theme .notification {
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.25);
-}
 .notification:hover {
   transform: scale(1.02);
   box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.1);
 }
-body.dark-theme .notification:hover {
-  box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.3);
-}
-.notification.swiping {
-  cursor: grabbing;
-  transition: none;
-}
-
 .notification .close-btn {
   position: absolute;
   top: 4px;
