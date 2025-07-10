@@ -16,7 +16,7 @@
 	</div>
 </header>
 
-<div class="main-content main-content-small-hero reveal-on-scroll" use:reveal>
+<div class="main-content main-content-small-hero">
 	<main>
 		<div class="intro-block">
 			<span class="tag">Сезон #6</span>

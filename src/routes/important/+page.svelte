@@ -60,7 +60,7 @@
 	</div>
 </header>
 
-<div class="main-content main-content-small-hero reveal-on-scroll" use:reveal>
+<div class="main-content main-content-small-hero">
 	<div class="intro-block">
 		<span class="tag">Проблема</span>
 		<h1>Двухнедельная фаза</h1>
