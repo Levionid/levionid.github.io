@@ -91,9 +91,10 @@
 			</div>
 			<div class="text-block reveal-on-scroll" use:reveal>
 				<span>Проходка</span>
-				<p>Проходка на сервер стоит <b>один</b> доллар. 
-					И <b>нет</b>, это <b>не дорого</b> - это не дороже <b>максичая</b>, 
-					но в отличие от него, здесь ты получаешь <b>кучу</b> эмоций на <b>целый</b> месяц. 
+				<p>Проходка на сервер стоит один доллар. 
+					И нет, это не дорого - это не дороже максичая, 
+					но в отличие от него, здесь ты получаешь кучу эмоций на целый месяц.
+				</p>
 			</div>
 		</div>
 
@@ -361,20 +362,6 @@
 		width: 80%;
 		height: 1px;
 	}
-}
-
-.details-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 60px;
-  align-items: start;
-}
-.details-container .text-content {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
 }
 
 .discord-widget-container iframe {

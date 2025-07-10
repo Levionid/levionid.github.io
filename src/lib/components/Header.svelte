@@ -56,7 +56,7 @@
   white-space: nowrap;
   position: relative;
 }
-.nav-links a:hover { opacity: 1; background-color: rgba(255, 255, 255, 0.1); }
+.nav-links a:hover { opacity: 1; background-color: rgba(255, 255, 255, 0.15); }
 .nav-links a.active { opacity: 1; font-weight: 600; }
 .nav-links a.active::after {
   content: '';
