@@ -25,7 +25,9 @@
   --transition-speed: 0.3s;
   --primary-text-color-rgb: 26, 32, 44;
   --hero-text-color-rgb: 255, 255, 255;
-  --bg-image-color: #191919;
+  --bg-image-color: linear-gradient(135deg, #b7e7ff, #00ccff, #00ffea);
+  --bg-image-brightness: 100%;
+  --bg-hero-contant-container: #ffffff8f;
 }
 
 body.dark-theme {
@@ -42,7 +44,9 @@ body.dark-theme {
   --hero-gradient-end: #004d40;
   --nav-bg-color: rgba(0, 0, 0, 0.15);
   --nav-text-color: 226, 232, 240;
-  --bg-image-color: #0b0b0b;
+  --bg-image-color: linear-gradient(#252525, #0b0b0b, #0b0b0b);
+  --bg-image-brightness: 50%;
+  --bg-hero-contant-container: #0000001f;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
