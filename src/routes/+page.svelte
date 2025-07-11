@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { createNotification } from '$lib/stores/notifications';
 	import reveal from '$lib/actions/reveal';
+	import { scrollToTarget } from '$lib/actions/scroll';
 
 	const SERVER_IP = 'lestix.me';
 	const SERVER_VERSION = '1.21';
@@ -38,12 +39,8 @@
 		}
 	];
 
-
 	function handleScrollToDetails() {
-		const detailsSection = document.getElementById('details');
-		if (detailsSection) {
-			detailsSection.scrollIntoView({ behavior: 'smooth' });
-		}
+		scrollToTarget('#details');
 	}
 
 	function handleCopyIP() {
@@ -217,7 +214,7 @@
 
 	.feature-image-container {
 		flex: 1;
-		min-width: 300px; /* Чтобы картинка не сжималась слишком сильно */
+		min-width: 300px;
 	}
 	
 	.feature-image {
@@ -227,13 +224,12 @@
 		border-radius: var(--border-radius-lg);
 		box-shadow: var(--card-shadow);
 		border: 1px solid var(--card-border-color);
-		display: block; /* Убирает лишний отступ под картинкой */
+		display: block;
 	}
 	
-	/* Стили для мобильных устройств */
 	@media (max-width: 768px) {
 		.feature-item, .feature-item.reverse {
-			flex-direction: column; /* Всегда вертикально */
+			flex-direction: column;
 			gap: 24px;
 		}
 		.feature-text h3, .features-header {

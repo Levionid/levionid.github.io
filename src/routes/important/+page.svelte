@@ -1,28 +1,6 @@
 <script lang="ts">
-	import reveal from '$lib/actions/reveal';
 	import { onMount } from 'svelte';
-
-	function scrollToTarget(selector: string) {
-		if (!selector) return;
-		const element = document.querySelector(selector);
-		if (!element) return;
-
-		let offset;
-		const screenWidth = window.innerWidth;
-		if (screenWidth < 600) {
-			offset = 150; 
-		} else {
-			offset = 110;
-		}
-
-		const elementPosition = element.getBoundingClientRect().top;
-		const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-		window.scrollTo({
-			top: offsetPosition,
-			behavior: 'smooth'
-		});
-	}
+	import { scrollToTarget } from '$lib/actions/scroll';
 
 	function handleLinkClick(event: MouseEvent) {
 		event.preventDefault();
@@ -74,7 +52,7 @@
 		<div class="text-block">
 			<p>Причины этой проблемы:</p>
 			<div class="blocks">
-				<!-- К каждой ссылке добавлен обработчик on:click -->
+				<!-- Обработчик on:click остался без изменений -->
 				<a href="#speedrun" class="block" on:click={handleLinkClick}>
 					<h2>Спидран</h2>
 					<p>
@@ -176,7 +154,6 @@
 </div>
 
 <style>
-/* Эти стили убирают стандартное подчеркивание у ссылок */
 a {
 	text-decoration: none;
 	color: unset;
