@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	import { theme } from '$lib/stores/theme';
+	// !!! ИМПОРТИРУЙТЕ `goto` !!!
+	import { goto } from '$app/navigation';
+	import { theme } from '$lib/stores/theme'; // Убедитесь, что этот импорт правильный
 	import NotificationContainer from '$lib/components/NotificationContainer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -11,6 +13,12 @@
 	$: isHomePage = $page.url.pathname === '/';
 
 	onMount(() => {
+		const redirectPath = sessionStorage.getItem('redirect');
+		if (redirectPath) {
+			sessionStorage.removeItem('redirect');
+			goto(redirectPath);
+		}
+
 		const unsubscribe = theme.subscribe((value) => {
 			if (typeof document !== 'undefined') {
 				document.body.classList.toggle('dark-theme', value === 'dark');
@@ -28,7 +36,6 @@
 	<slot />
 {:else}
 	<Header />
-
 	<div class="page-container">
 		<main>
 			<slot />

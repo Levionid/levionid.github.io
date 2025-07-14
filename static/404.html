@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Lestix - Перенаправление...</title>
+		<script>
+			const path = location.pathname;
+
+			sessionStorage.setItem('redirect', path);
+
+			const repoName = path.split('/')[1];
+			const baseUrl = location.hostname.includes('github.io') ? '/' + repoName + '/' : '/';
+
+			location.replace(baseUrl);
+		</script>
+	</head>
+	<body>
+		<p>Если вас не перенаправило автоматически, <a href="/">нажмите сюда</a>.</p>
+	</body>
+</html>
