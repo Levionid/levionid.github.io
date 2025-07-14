@@ -26,16 +26,15 @@
 
 	<div class="error-container">
 		<h1 class="glitch" data-text="404">404</h1>
-		<h2 class="subtitle">Вы упали в Пустоту</h2>
+		<h2 class="subtitle">Ара иди нахуй</h2>
 		<p class="details">
-			Этой страницы не существует в нашем мире. <br />Лишь бесконечная пустота и потерянные байты.
+			Лееее братишка ты куда зашел?
 		</p>
-		<a href="/" class="return-button">Вернуться на твёрдую землю</a>
+		<a href="/" class="return-button">Вернуться на родину</a>
 	</div>
 </div>
 
 <style>
-	/* --- Стили по умолчанию (Светлая тема) --- */
 	.error-page-wrapper {
 		display: flex;
 		align-items: center;
@@ -139,7 +138,7 @@
 
 	.particle {
 		position: absolute;
-		background: #333; /* Темные частицы для светлой темы */
+		background: #333;
 		border-radius: 50%;
 		opacity: 0;
 		animation-name: particle-animation;
@@ -147,7 +146,6 @@
 		animation-iteration-count: infinite;
 	}
 
-	/* --- Переопределение для Темной темы --- */
 	:global(body.dark-theme) .error-page-wrapper {
 		background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 		color: #ffffff;
@@ -174,10 +172,9 @@
 	}
 
 	:global(body.dark-theme) .particle {
-		background: white; /* Светлые частицы для темной темы */
+		background: white;
 	}
 
-	/* ... все @keyframes остаются без изменений ... */
 	@keyframes particle-animation { from { transform: translateY(20px); opacity: 0; } 20% { opacity: 0.8; } to { transform: translateY(-100vh); opacity: 0; } }
 	@keyframes glitch-1 { 0% { clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%); } 2% { clip-path: polygon(0 78%, 100% 78%, 100% 82%, 0 82%); } 4% { clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%); } 6% { clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%); } 8% { clip-path: polygon(0 40%, 100% 40%, 100% 42%, 0 42%); } 10%, 100% { clip-path: none; } }
 	@keyframes glitch-2 { 0% { clip-path: polygon(0 78%, 100% 78%, 100% 99%, 0 99%); } 5% { clip-path: polygon(0 25%, 100% 25%, 100% 33%, 0 33%); } 8% { clip-path: polygon(0 13%, 100% 13%, 100% 34%, 0 34%); } 11% { clip-path: polygon(0 42%, 100% 42%, 100% 43%, 0 43%); } 15%, 100% { clip-path: none; } }
