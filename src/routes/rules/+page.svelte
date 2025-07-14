@@ -3,7 +3,7 @@
 	<meta property="og:title" content="Lestix - Правила" />
 	<meta property="og:description" content="Полный свод правил сервера Lestix." />
 	<meta property="og:url" content="https://levionid.github.io/rules" />
-	<meta property="og:image" content="https://levionid.github.io/meta-image.png" />
+	<meta property="og:image" content="https://levionid.github.io/meta-image-rules.png" />
 </svelte:head>
 
 <header class="hero hero-small">

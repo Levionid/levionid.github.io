@@ -77,7 +77,7 @@
 	<meta property="og:title" content="Lestix - План Сезона" />
 	<meta property="og:description" content="Планы и текущий этап развития сервера Lestix." />
 	<meta property="og:url" content="https://levionid.github.io/plan" />
-	<meta property="og:image" content="https://levionid.github.io/meta-image.png" />
+	<meta property="og:image" content="https://levionid.github.io/meta-image-plan.png" />
 </svelte:head>
 
 <header class="hero hero-small">
