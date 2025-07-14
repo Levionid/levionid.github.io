@@ -15,7 +15,7 @@ export function scrollToTarget(selector: string) {
 	let offset;
 	const screenWidth = window.innerWidth;
 	if (screenWidth < 600) {
-		offset = 150; // Отступ для мобильных устройств
+		offset = 100; // Отступ для мобильных устройств
 	} else {
 		offset = 110; // Отступ для десктопов
 	}
