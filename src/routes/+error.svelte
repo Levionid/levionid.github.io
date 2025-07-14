@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>{$page.status} - Вы упали в Пустоту | Lestix</title>
+	<title>Lestix - {$page.status}</title>
 	<meta name="description" content="Этой страницы не существует в нашем мире. Лишь бесконечная пустота." />
 </svelte:head>
 
@@ -140,13 +140,11 @@
 		z-index: 1;
 	}
 
-	/* Общие стили для всех частиц */
 	.particle {
 		position: absolute;
 		background: white;
 		border-radius: 50%;
 		opacity: 0;
-		/* Имя и общие параметры анимации */
 		animation-name: particle-animation;
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
