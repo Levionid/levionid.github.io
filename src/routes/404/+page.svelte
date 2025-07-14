@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 </script>
 
 <svelte:head>
-	<title>Lestix - {$page.status}</title>
+	<title>Lestix - 404</title>
 	<meta name="description" content="Этой страницы не существует в нашем мире. Лишь бесконечная пустота." />
 </svelte:head>
 
@@ -28,7 +27,7 @@
 		<h1 class="glitch" data-text="404">404</h1>
 		<h2 class="subtitle">Вы упали в Пустоту</h2>
 		<p class="details">
-			Этой страницы не существует в нашем мире. <br />Лишь бесконечная пустота и потерянные байты.
+			Лееее братишка ты куда зашел?
 		</p>
 		<a href="/" class="return-button">Вернуться на твёрдую землю</a>
 	</div>

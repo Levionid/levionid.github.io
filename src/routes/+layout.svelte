@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	// !!! ИМПОРТИРУЙТЕ `goto` !!!
 	import { goto } from '$app/navigation';
-	import { theme } from '$lib/stores/theme'; // Убедитесь, что этот импорт правильный
+	import { theme } from '$lib/stores/theme';
 	import NotificationContainer from '$lib/components/NotificationContainer.svelte';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -16,7 +15,10 @@
 		const redirectPath = sessionStorage.getItem('redirect');
 		if (redirectPath) {
 			sessionStorage.removeItem('redirect');
-			goto(redirectPath);
+
+			if (window.location.pathname !== '/404') {
+				goto('/404', { replaceState: true });
+			}
 		}
 
 		const unsubscribe = theme.subscribe((value) => {
