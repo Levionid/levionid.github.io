@@ -11,10 +11,12 @@
 	$: isHomePage = $page.url.pathname === '/';
 
 	onMount(() => {
-		document.body.classList.toggle('dark-theme', $theme === 'dark');
-		theme.subscribe((value) => {
-			document.body.classList.toggle('dark-theme', value === 'dark');
+		const unsubscribe = theme.subscribe((value) => {
+			if (typeof document !== 'undefined') {
+				document.body.classList.toggle('dark-theme', value === 'dark');
+			}
 		});
+		return unsubscribe;
 	});
 </script>
 
@@ -22,14 +24,18 @@
 
 <NotificationContainer />
 
-<Header />
+{#if $page.error}
+	<slot />
+{:else}
+	<Header />
 
-<div class="page-container">
-	<main>
-		<slot />
-	</main>
-	<Footer />
-</div>
+	<div class="page-container">
+		<main>
+			<slot />
+		</main>
+		<Footer />
+	</div>
+{/if}
 
 <style>
 	.page-container {

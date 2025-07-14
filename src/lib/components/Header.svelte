@@ -104,7 +104,7 @@
 	</ul>
 </aside>
 
-<div class="overlay" class:is-open={isMenuOpen} on:click={closeMenu} aria-hidden="true" />
+<div class="overlay" class:is-open={isMenuOpen} on:click={closeMenu} aria-hidden="true"></div>
 
 <style>
 	:global(body.no-scroll) {
