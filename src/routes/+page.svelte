@@ -64,14 +64,12 @@
 				<h1>Lestix</h1>
 				<p>Сервер с крутейшим сообществом и кучей эмоций!</p>
 			</div>
-			<button class="hero-action-button" on:click={handleScrollToDetails}>
-				Начать играть
-			</button>
+			<button class="hero-action-button" on:click={handleScrollToDetails}>Начать играть</button>
 		</div>
 	</section>
 
 	<section id="details" class="details-section ip-section">
-		<div class="details-card-wrapper reveal-on-scroll" use:reveal>
+		<div class="details-card-wrapper" use:reveal>
 			<div class="details-card">
 				<div class="info-block">
 					<span class="label">Версия</span>
@@ -92,10 +90,10 @@
 							stroke-width="2"
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							><rect x="9" y="9" width="13" height="13" rx="2" ry="2" /><path
-								d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
-							/></svg
 						>
+							<rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+							<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+						</svg>
 					</button>
 				</div>
 			</div>
@@ -105,31 +103,30 @@
 	<section class="details-section about-section">
 		<div class="two-column-layout">
 			<div class="text-content-column">
-				<div class="text-block reveal-on-scroll" use:reveal>
-					<span>Добро пожаловать!</span>
+				<div class="text-block" use:reveal>
+					<h2>Добро пожаловать!</h2>
 					<p>
 						Lestix — это приватный сервер для друзей, созданный для комфортной совместной игры и
 						реализации творческих идей.
 					</p>
 				</div>
-				<div class="text-block reveal-on-scroll" use:reveal>
-					<span>Наше сообщество</span>
+				<div class="text-block" use:reveal>
+					<h2>Наше сообщество</h2>
 					<p>
 						Мы ценим каждого игрока и стремимся создать дружелюбную атмосферу. Присоединяйся к нашему
 						Discord, чтобы быть в курсе всех новостей, участвовать в обсуждениях и найти компанию для
 						игры.
 					</p>
 				</div>
-				<div class="text-block reveal-on-scroll" use:reveal>
-					<span>Проходка</span>
-					<p>Проходка на сервер стоит один доллар. 
-						И нет, это не дорого - это не дороже максичая, 
+				<div class="text-block" use:reveal>
+					<h2>Проходка</h2>
+					<p>
+						Проходка на сервер стоит один доллар. И нет, это не дорого - это не дороже максичая,
 						но в отличие от него, здесь ты получаешь кучу эмоций на целый месяц.
 					</p>
 				</div>
 			</div>
-
-			<div class="discord-widget-container reveal-on-scroll" use:reveal>
+			<div class="discord-widget-container" use:reveal>
 				<iframe
 					src="https://discord.com/widget?id=704944416191807568&theme=dark"
 					title="Discord Widget"
@@ -141,82 +138,83 @@
 	</section>
 
 	<section class="details-section features-section">
-		<div class="features-header text-block reveal-on-scroll" use:reveal>
-			<span>Ванилла, но с изюминкой</span>
+		<div class="features-header text-block" use:reveal>
+			<span class="tag">Ванилла, но с изюминкой</span>
 			<h2>Чем наш сервер отличается?</h2>
 			<p>
-				Мы сохраняем классический геймплей, но улучшаем его с помощью ядра <strong>Purpur</strong> для максимальной производительности и тщательно подобранных дополнений. Забудьте о скуке — наш мир создан для приключений.
+				Мы сохраняем классический геймплей, но улучшаем его с помощью ядра <strong>Purpur</strong>
+				для максимальной производительности и тщательно подобранных дополнений. Забудьте о скуке —
+				наш мир создан для приключений.
 			</p>
 		</div>
-
 		<div class="features-grid">
 			{#each features as feature, i}
-				<div class="feature-item reveal-on-scroll" use:reveal class:reverse={i % 2 !== 0}>
+				<article class="feature-item" use:reveal class:reverse={i % 2 !== 0}>
 					<div class="feature-text">
 						<h3>{feature.title}</h3>
 						<p>{feature.description}</p>
 					</div>
 					<div class="feature-image-container">
-						<img src={feature.imageUrl} alt={feature.alt} class="feature-image"/>
+						<img src={feature.imageUrl} alt={feature.alt} class="feature-image" />
 					</div>
-				</div>
+				</article>
 			{/each}
 		</div>
 	</section>
-
 </div>
 
 <style>
+	.page-wrapper > .details-section {
+		padding-block: 100px;
+	}
 	.features-section {
 		padding-top: 60px;
-		padding-bottom: 100px;
 	}
-
 	.features-header {
 		max-width: 1000px;
-		margin: 0 auto 40px auto;
+		margin-inline: auto;
+		margin-bottom: 40px;
 		text-align: left;
 	}
-	
+	.features-header .tag {
+		color: var(--accent-color);
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
 	.features-header h2 {
 		margin-top: 4px;
 	}
-	
 	.features-grid {
 		max-width: 1000px;
-		margin: 0 auto;
+		margin-inline: auto;
 		display: flex;
 		flex-direction: column;
 		gap: 60px;
 	}
-
 	.feature-item {
 		display: flex;
 		gap: 40px;
 		align-items: center;
 	}
-	
 	.feature-item.reverse {
 		flex-direction: row-reverse;
 	}
-
 	.feature-text {
 		flex: 1;
 	}
-
 	.feature-text h3 {
 		color: var(--primary-text-color);
-		font-size: 24px;
+		font-size: 1.75rem;
 		font-weight: 700;
 		margin-top: 0;
 		margin-bottom: 12px;
 	}
-
 	.feature-image-container {
 		flex: 1;
 		min-width: 300px;
 	}
-	
 	.feature-image {
 		width: 100%;
 		height: auto;
@@ -226,17 +224,6 @@
 		border: 1px solid var(--card-border-color);
 		display: block;
 	}
-	
-	@media (max-width: 768px) {
-		.feature-item, .feature-item.reverse {
-			flex-direction: column;
-			gap: 24px;
-		}
-		.feature-text h3, .features-header {
-			text-align: left;
-		}
-	}
-
 	.home-hero {
 		height: 100vh;
 		min-height: 700px;
@@ -248,21 +235,16 @@
 		color: var(--hero-text-color);
 		overflow: hidden;
 	}
-
 	.home-hero::before {
 		content: '';
 		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+		inset: 0;
 		background-image: url('/background.png'), var(--bg-image-color);
 		background-size: contain;
 		background-position: right 10% center;
 		background-repeat: no-repeat;
 		transition: all 0.3s ease-in-out;
 	}
-
 	.hero-content-container {
 		position: relative;
 		z-index: 3;
@@ -273,11 +255,9 @@
 		width: 90%;
 		max-width: 1100px;
 	}
-
 	.hero-content-container .text-content-hero {
 		max-width: 500px;
 	}
-
 	.text-content-hero h1 {
 		font-size: clamp(4rem, 10vw, 8rem);
 		font-weight: 800;
@@ -287,17 +267,14 @@
 		letter-spacing: -0.05em;
 		text-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
 	}
-
 	.text-content-hero p {
 		font-size: clamp(1.1rem, 2.5vw, 1.3rem);
 		max-width: 450px;
-		margin-top: 16px;
-		opacity: 1;
+		margin-top: 1rem;
 		line-height: 1.6;
 		color: var(--secondary-text-color);
-		text-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
+		text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 	}
-
 	.hero-action-button {
 		display: flex;
 		align-items: center;
@@ -305,27 +282,22 @@
 		background-color: var(--primary-text-color);
 		color: var(--bg-color);
 		border: none;
-		border-radius: 12px;
+		border-radius: var(--border-radius-md);
 		padding: 18px 32px;
 		font-size: 1.1rem;
 		font-weight: 600;
 		cursor: pointer;
-		transition:
-			transform 0.3s ease,
-			box-shadow 0.3s ease;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 	}
-
 	.hero-action-button:hover {
 		transform: translateY(-4px);
 		box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
 	}
-
 	.details-section {
-		padding: 100px 40px 0 40px;
+		padding-inline: 40px;
 		background-color: var(--bg-color);
 	}
-
 	.ip-section {
 		display: flex;
 		justify-content: center;
@@ -333,13 +305,12 @@
 		position: relative;
 		z-index: 5;
 		background: transparent;
+		padding-block: 0;
 	}
-
 	.details-card-wrapper {
 		width: 100%;
 		max-width: 600px;
 	}
-
 	.details-card {
 		background: var(--content-bg-color);
 		border: 1px solid var(--card-border-color);
@@ -352,7 +323,6 @@
 		box-shadow: var(--card-shadow);
 		backdrop-filter: blur(10px);
 	}
-
 	.info-block {
 		display: flex;
 		flex-direction: column;
@@ -360,7 +330,6 @@
 		gap: 8px;
 		text-align: center;
 	}
-
 	.label {
 		font-size: 0.9rem;
 		font-weight: 500;
@@ -368,13 +337,11 @@
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 	}
-
 	.value {
 		font-weight: 700;
 		color: var(--primary-text-color);
 		font-size: 1.75rem;
 	}
-
 	.ip-address {
 		display: flex;
 		align-items: center;
@@ -384,15 +351,12 @@
 		border-radius: var(--border-radius-md);
 		cursor: pointer;
 		border: 1px solid transparent;
-		transition:
-			border-color 0.2s,
-			background-color 0.2s;
+		transition: border-color 0.2s, background-color 0.2s;
 	}
 	.ip-address:hover {
 		border-color: var(--accent-color);
 		background-color: var(--card-bg-color);
 	}
-
 	.ip-address svg {
 		opacity: 0.6;
 		transition: opacity 0.2s;
@@ -400,104 +364,103 @@
 	.ip-address:hover svg {
 		opacity: 1;
 	}
-
 	.divider {
 		width: 1px;
 		height: 60px;
 		background-color: var(--card-border-color);
 	}
-
-	.two-column-layout {
+	.about-section .two-column-layout {
 		max-width: 1000px;
-		margin: 0 auto;
-		display: flex; 
+		margin-inline: auto;
+		display: flex;
 		gap: 40px;
 		align-items: flex-start;
 	}
-
 	.text-content-column {
 		display: flex;
 		flex-direction: column;
 		gap: 40px;
 		flex: 1;
 	}
-
+	.text-content-column h2 {
+		font-size: 1.75rem;
+		margin-bottom: 4px;
+	}
 	.discord-widget-container {
 		flex-basis: 350px;
 		min-width: 320px;
-		height: auto;
+		height: 500px;
 	}
-
 	.discord-widget-container iframe {
 		width: 100%;
 		height: 100%;
-		min-height: 500px;
+		border-radius: var(--border-radius-md);
+		box-shadow: var(--card-shadow);
+		border: 1px solid var(--card-border-color);
 	}
-
 	@media (max-width: 1000px) {
 		.home-hero::before {
-			background-image: url('/background.png'), var(--bg-image-color);
 			transform: scale(1.1);
 			filter: brightness(var(--bg-image-brightness)) blur(5px);
 		}
 	}
-
 	@media (max-width: 768px) {
-		.two-column-layout {
+		.feature-item,
+		.feature-item.reverse {
+			flex-direction: column;
+			gap: 24px;
+		}
+		.feature-text h3,
+		.features-header {
+			text-align: left;
+		}
+		.about-section .two-column-layout {
 			flex-direction: column;
 			gap: 40px;
 		}
 		.discord-widget-container {
 			flex-basis: auto;
 			width: 100%;
+			height: 400px;
 		}
 		.home-hero {
-				text-align: center;
-				justify-content: center;
-				align-items: flex-end;
-				padding-bottom: 25vh;
-				min-height: 600px;
-			}
-
-			.home-hero::before {
-				background-size: cover;
-				background-position: center center;
-			}
-
-			.hero-content-container {
-				align-items: center;
-				text-align: center;
-				gap: 32px;
-				padding-left: 0;
-				padding-top: 60px;
-				padding-bottom: 60px;
-				background-color: var(--bg-hero-contant-container);
-				border: 1px solid #ffffff1f;
-				border-radius: 32px;
-				backdrop-filter: blur(10px);
-			}
+			text-align: center;
+			justify-content: center;
+			align-items: flex-end;
+			padding-bottom: 25vh;
+			min-height: 600px;
+		}
+		.home-hero::before {
+			background-size: cover;
+			background-position: center center;
+		}
+		.hero-content-container {
+			align-items: center;
+			text-align: center;
+			gap: 32px;
+			padding: 60px 24px;
+			background-color: var(--bg-hero-contant-container);
+			border: 1px solid #ffffff1f;
+			border-radius: 32px;
+			backdrop-filter: blur(10px);
+		}
 		.details-section {
-			padding: 80px 30px 0 30px;
+			padding-inline: 30px;
+			padding-block: 80px;
+		}
+		.ip-section {
+			padding-block: 0;
 		}
 	}
-
 	@media (max-width: 480px) {
 		.details-card {
 			flex-direction: column;
 			gap: 12px;
-			padding: 12px;
+			padding: 24px;
 		}
 		.divider {
 			width: 80%;
 			height: 1px;
 		}
-	}
-
-	.discord-widget-container iframe {
-	width: 100%;
-	height: 330px;
-	border-radius: var(--border-radius-md);
-	box-shadow: var(--card-shadow);
-	border: 1px solid var(--card-border-color);
 	}
 </style>

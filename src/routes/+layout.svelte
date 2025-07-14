@@ -4,8 +4,8 @@
 	import { theme } from '$lib/stores/theme';
 	import NotificationContainer from '$lib/components/NotificationContainer.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import './style.css';
 	import Footer from '$lib/components/Footer.svelte';
+	import './style.css';
 
 	let isHomePage = false;
 	$: isHomePage = $page.url.pathname === '/';
@@ -28,7 +28,6 @@
 	<main>
 		<slot />
 	</main>
-
 	<Footer />
 </div>
 
@@ -38,9 +37,7 @@
 		flex-direction: column;
 		min-height: 100vh;
 	}
-
 	main {
 		flex-grow: 1;
-		margin-bottom: 40px;
 	}
 </style>
