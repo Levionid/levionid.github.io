@@ -1,10 +1,9 @@
 <script lang="ts">
-	// Скриптовая часть остается пустой
 </script>
 
 <svelte:head>
 	<title>404 - Вы упали в Пустоту | Lestix</title>
-	<meta name="description" content="Этой страницы не существует в нашем мире. Лишь бесконечная пустота." />
+	<meta name="description" content="Этой страницы не существует." />
 </svelte:head>
 
 <div class="error-page-wrapper">
@@ -26,9 +25,9 @@
 
 	<div class="error-container">
 		<h1 class="glitch" data-text="404">404</h1>
-		<h2 class="subtitle">Ара иди нахуй</h2>
+		<h2 class="subtitle">Лееее братишка ты куда попал</h2>
 		<p class="details">
-			Лееее братишка ты куда зашел?
+			Этой страницы не существует, сами подумайте, изначально-то страниц быть не может. Получается так, что их кто-то создает. Я подозреваю, что в каджом пк сидит какое-то существо, которое их создает.
 		</p>
 		<a href="/" class="return-button">Вернуться на родину</a>
 	</div>
