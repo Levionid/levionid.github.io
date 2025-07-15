@@ -2,7 +2,7 @@
 </script>
 
 <svelte:head>
-	<title>404 - Вы упали в Пустоту | Lestix</title>
+	<title>Lestix - 404</title>
 	<meta name="description" content="Этой страницы не существует." />
 </svelte:head>
 

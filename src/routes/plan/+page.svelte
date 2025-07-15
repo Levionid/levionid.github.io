@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	// !!! ВАЖНО: Установите реальную дату старта сезона !!!
-	const SERVER_START_DATE = new Date('2025-07-13T17:00:00+05:00');
+	const SERVER_START_DATE = new Date('2025-07-22T00:00:00+05:00');
 
 	const timelineStages = [
 		{
