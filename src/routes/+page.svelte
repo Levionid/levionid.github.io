@@ -4,7 +4,7 @@
 	import { scrollToTarget } from '$lib/actions/scroll';
 
 	const SERVER_IP = 'lestix.me';
-	const SERVER_VERSION = '1.21';
+	const SERVER_VERSION = '1.21.7';
 
 	const features = [
 		{
