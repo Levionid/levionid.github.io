@@ -24,6 +24,7 @@
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"@types/three": "^0.178.1",
 		"@vitest/browser": "^3.2.3",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
@@ -42,6 +43,7 @@
 	},
 	"dependencies": {
 		"svelte-particles": "^2.12.0",
+		"three": "^0.178.0",
 		"tsparticles": "^3.8.1",
 		"uuid": "^11.1.0"
 	}

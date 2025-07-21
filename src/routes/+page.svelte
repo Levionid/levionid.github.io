@@ -55,6 +55,7 @@
 	<meta property="og:description" content="Сервер с крутейшим сообществом и кучей эмоций!" />
 	<meta property="og:url" content="https://levionid.github.io/" />
 	<meta property="og:image" content="https://levionid.github.io/meta-image-general.png" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet" />
 </svelte:head>
 
 <div class="page-wrapper">

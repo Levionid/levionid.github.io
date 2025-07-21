@@ -1,5 +1,3 @@
-<!-- src/lib/components/Footer.svelte -->
-
 <script lang="ts">
 	const currentYear = new Date().getFullYear();
 </script>
@@ -11,7 +9,7 @@
 			<p>Создано с ❤️ для нашего сообщества.</p>
 		</div>
 		<div class="footer-links">
-			<a href="https://discord.com/invite/NGpPENZu" target="_blank" rel="noopener noreferrer">Discord</a>
+			<a href="https://discord.gg/HNXRQv7peV" target="_blank" rel="noopener noreferrer">Discord</a>
 			<a href="https://github.com/levionid/levionid.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
 		</div>
 	</div>
