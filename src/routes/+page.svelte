@@ -3,7 +3,7 @@
 	import reveal from '$lib/actions/reveal';
 	import { scrollToTarget } from '$lib/actions/scroll';
 
-	const SERVER_IP = 'lestix.me';
+	const SERVER_IP = 'lestix.20tps.ru';
 	const SERVER_VERSION = '1.21.7';
 
 	const features = [
